@@ -6,8 +6,9 @@ for file in *;do
 		new_name="${file#*-}"
 		if [[ "$new_name" == "$file" ]]; then
 			continue
-		elif [[ "$new_name" == "$script_name" ]]; then
+		if [[ "$new_name" == "$script_name" ]]; then
 			continue
+		fi
 		fi
 
 		echo "$new_name"
