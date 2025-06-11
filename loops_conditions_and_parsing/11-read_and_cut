@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #commit
-while 	IFS=":" read -r username _ uid _ _ _ home _; do
-	echo "$username"
-	echo "$uid"
-	echo "$home"
+while read -r line; do
+	echo "$line" | cut -d: -f1,3,6;
 done < /etc/passwd
