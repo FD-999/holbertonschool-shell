@@ -3,10 +3,12 @@
 file="9-to_file_or_not_to_file"
 if [[ -e "$file" ]]; then
 	echo "school file exists"
-	if [[ -s "$file" ]]; then
-		 echo "school file is not empty"
-	elif [[ -f "$file" ]]; then
+	if [[ -f "$file" ]]; then
 		echo "school is a regular file"
+	fi
+	if [[ -s "$file" ]]; then
+		echo "school file is not empty"
+	
 	else 
 		echo "school file is empty"
 	fi	
