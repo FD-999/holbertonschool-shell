@@ -3,12 +3,15 @@
 script_name="8-for_ls"
 for file in *;do
 	if [[ -e "$file" ]]; then
-		new_name="${file#*-}"
+	 	new_name="${file#*-}"
+		if [[ "$file" == "$script_name" ]]; then
+                        continue
+                fi
+	
+		
 		if [[ "$new_name" == "$file" ]]; then
 			continue
-		if [[ "$new_name" == "$script_name" ]]; then
-			continue
-		fi
+		
 		fi
 
 		echo "$new_name"
