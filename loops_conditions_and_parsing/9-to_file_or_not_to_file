@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#commit
+file="9-to_file_or_not_to_file"
+if [[ -e "$file" ]]; then
+	echo "school file exists"
+	if [[ -s "$file" ]]; then
+		echo "school file is empty"
+	elif [[ -f "$file" ]]; then
+		echo "school is a regular file"
+	else 
+		echo "school file is not empty"
+	fi	
+else 
+	echo "school file does not exist"
+fi
