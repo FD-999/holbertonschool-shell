@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #commit
-file="9-to_file_or_not_to_file"
+file="school"
 if [[ -e "$file" ]]; then
 	echo "school file exists"
 	if [[ -f "$file" ]]; then
