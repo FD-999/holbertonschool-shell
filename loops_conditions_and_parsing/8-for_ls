@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 #commit
+script_name="8-for_ls"
 for file in *;do
 	if [[ -e "$file" ]]; then
 		new_name="${file#*-}"
 		if [[ "$new_name" == "$file" ]]; then
+			continue
+		elif [[ "$new_name" == "$script_name" ]]; then
 			continue
 		fi
 
