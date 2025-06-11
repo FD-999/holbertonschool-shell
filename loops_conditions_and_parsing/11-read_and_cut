@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#commit
+while 	lFS=":" read -r username _ uid _ _ _ home _; do
+	echo "$username"
+	echo "$uid"
+	echo "$home"
+done < /etc/passwd
