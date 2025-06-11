@@ -3,7 +3,7 @@
 for file in *;do
 	if [[ -e "$file" ]]; then
 		new_name="${file#*-}"
-		if [[ $new_name == $file ]]; then
+		if [[ "$new_name" == "$file" ]]; then
 			continue
 		fi
 
