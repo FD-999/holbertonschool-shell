@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#comment
+for i in /proc/[0-9]*; do
+	if [[ -r "$i/comm" ]]; then
+		pid_name=$(cat "$i/comm")
+		if [[ "$pid_name" == "bash" ]]; then
+			pid_num=$( basename "$i" )
+			echo "$pid_num $pid_name"
+		fi
+	fi
+done
