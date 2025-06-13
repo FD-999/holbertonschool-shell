@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #comment
-pid=$( ps -eo pid,comm | grep '7-highlander' | grep -v grep | awk '{print $1}')
+pid=$(pgrep -x 7-highlander)
 if [[ -n "$pid" ]]; then
 	kill "$pid"
 	echo "OK"
