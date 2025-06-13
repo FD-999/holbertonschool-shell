@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #comment
-pkill -f 7-highlander 
-echo "OK"
+pid=$(pgrep 7-highlander)
+if [[ -n "$pid" ]]; then
+	kill "$pid"
+fi
