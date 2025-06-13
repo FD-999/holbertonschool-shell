@@ -1,23 +1,5 @@
 #!/usr/bin/env bash
 #commit
-
-script_name="8-for_ls"
-
 for file in *; do
-    if [[ -e "$file" ]]; then
-        
-        new_name="${file#*-}"
-
-        
-        if [[ "$new_name" == "$file" ]]; then
-            continue
-        fi
-
-        
-        if [[ "$file" == "$script_name" ]]; then
-            continue
-        fi
-
-        echo "$new_name"
-    fi
+    echo "${file#*-}"
 done
