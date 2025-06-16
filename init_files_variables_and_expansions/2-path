@@ -1,2 +1,3 @@
 #!/bin/bash
-mkdir /$PATH/action
+mkdir -p /action
+export PATH="$PATH:/action"
